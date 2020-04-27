@@ -1,5 +1,6 @@
 package edu.neu.csye6200.controller;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,9 +33,16 @@ public class Main {
 			assignstudent.toclass(singlestudent);
 		}
 
+	}
 		
-
-		}
+		
+		
+public static void newRegistration() {
+	
+	//Student singlestudent = new Student();
+	assignstudent.toclass(new AddStudentRegistration().addStudent(new StudentRegistration(10,"SSS","Sidd",4,23,"SCS","Sidd","115NOrth",4264,LocalDate.parse("2018-11-10"),1,1,1,1,1,1)));
+		
+}
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(()->new MainFrame());
 		// TODO Auto-generated method stub
@@ -45,13 +53,29 @@ public class Main {
 //		Main.addstudent("5,Jim,Thomas,24,Micheal,Thomas,0,Boston MA,55445");
 //		Main.addstudent("6,Jim,Thomas,26,Micheal,Thomas,0,Boston MA,55445");
 //		Studentview.viewall();
+		assignstudent.toclass(new AddStudentRegistration().addStudent(new StudentRegistration(10,"SSS","Sidd",4,23,"SCS","Sidd","115NOrth",4264,LocalDate.parse("2018-11-10"),1,1,1,1,1,1)));
+		
+		
 		Main.addstudent("C:\\Users\\yccha\\git\\DayCare\\DayCaretest\\src\\edu\\neu\\csye6200\\Students.txt");
 		Studentview.viewall();
 		Studentview.viewRegistration();
 		FileIO fileutil = new FileIO();
+
+		fileutil.writeStudentCSV("StudentDatabase", Classdatahandler.getclassrooms(1).get(0));
+		
+	
+		
+	
+	
+	}
 		fileutil.writeStudentCSV("StudentDatabase.txt", Classdatahandler.getclassrooms(1).get(0));
 		}
 	
+        //assignstudent.toclass(new AddStudentRegistration.addStudent(new StudentRegistration(10,"SSS","Sidd",23,"SCS","Sidd",4,"115NOrth",4264,"2018-11-10",1,1,1,1,1,1))));
 		
+	
+
+		
+	
 }
 
